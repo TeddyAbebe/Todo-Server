@@ -1,0 +1,43 @@
+GET http://localhost:9000/.netlify/functions/todo
+
+###
+
+GET http://localhost:4000/todo/2
+
+###
+
+GET http://localhost:4000/todo/col/2
+
+###
+
+POST http://localhost:4000/todo
+content-type: application/json
+
+{
+    "id": "123123132",
+    "title": "Surafel todo",
+    "completed": false,
+    "colid": 2
+}
+
+###
+
+PUT http://localhost:4000/todo/complete/2
+content-type: application/json
+
+{
+    "completed": true
+}
+
+###
+
+PUT http://localhost:4000/todo/1
+content-type: application/json
+
+{
+    "title": "New Collection Title"
+}
+
+###
+
+DELETE http://localhost:4000/todo/2
