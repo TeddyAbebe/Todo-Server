@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
   res.send("Todo Api");
 });
 
-app.use("/.netlify/functions/todo", require("./routes/todo.route"));
+app.use("/todo", require("./routes/todo.route"));
 
 module.exports = app;
 module.exports.handler = serverless(app);
